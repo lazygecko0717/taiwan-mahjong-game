@@ -7,14 +7,50 @@
 :root{--green:#0d684e;--felt:#14785b;--cream:#fff8e8;--gold:#f2c66d;--ink:#18352d;--red:#c73535}
 *{box-sizing:border-box}body{margin:0;background:#f3f1e8;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif}button,input{font:inherit}button{border:0;border-radius:12px;padding:11px 14px;background:var(--green);color:white;font-weight:700;cursor:pointer}button.secondary{background:#e5eee9;color:var(--green);border:1px solid #c8ddd3}button:disabled{opacity:.4;cursor:not-allowed}
 header{background:var(--green);color:white;padding:15px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px}header h1{font-size:19px;margin:0}header small{opacity:.8}.wrap{max-width:900px;margin:auto;padding:12px}.panel{background:white;border-radius:16px;padding:14px;margin-bottom:12px;box-shadow:0 3px 14px #1232}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.muted{color:#687b73;font-size:13px}.roomcode{font-size:24px;font-weight:900;letter-spacing:4px;color:var(--green)}input{padding:11px;border:1px solid #cbd8d1;border-radius:10px;min-width:0;width:100%}.table{background:radial-gradient(ellipse at center,#1d926c,#07553f);color:white;border-radius:20px;padding:10px;box-shadow:inset 0 0 0 5px #d6ad62;overflow:hidden;display:grid;grid-template-columns:minmax(72px,1fr) minmax(220px,2.2fr) minmax(72px,1fr);grid-template-rows:auto minmax(0,1fr) auto auto;gap:4px;align-items:center;min-height:420px}.seat{min-height:50px;text-align:center;padding:6px;font-size:13px}.seat strong{display:block}.table>.seat:first-child{grid-column:2;grid-row:1}.table>.row{display:contents}.table>.row>.seat:first-child{grid-column:1;grid-row:2;align-self:start;padding-top:22px}.table>.row>.middle{grid-column:2;grid-row:2;align-self:stretch}.table>.row>.seat:last-child{grid-column:3;grid-row:2;align-self:start;padding-top:22px}.table>.seat:nth-of-type(3){grid-column:2;grid-row:3}.table>.hand{grid-column:1 / 4;grid-row:4}.table>.actions{grid-column:1 / 4;grid-row:5}.opponentTiles{display:flex;justify-content:center;gap:3px;margin:5px 0 10px}.back{height:26px;width:17px;border-radius:3px;background:linear-gradient(135deg,#e6f0e9,#a8cbb8);border:1px solid #fff;box-shadow:0 1px 2px #0004}.middle{background:#ffffff18;border:1px solid #ffffff38;border-radius:12px;min-height:100px;padding:8px;margin:4px 0}.discards{display:flex;flex-wrap:wrap;justify-content:center;gap:3px;min-height:30px}.tile{background:linear-gradient(#fffef8,#f1ead9);color:#18352d;border:1px solid #d3c9b5;border-radius:5px;box-shadow:0 2px 0 #b8ad99;display:inline-flex;align-items:center;justify-content:center;font-weight:800;flex-direction:column;line-height:1;user-select:none}.tile .small{font-size:9px;font-weight:500;margin-top:3px}.tile{padding:1px;overflow:hidden}.mahjong-art{display:block;width:94%;height:94%;flex:0 0 94%;overflow:hidden;pointer-events:none}.discard{width:24px;height:32px;font-size:17px;padding:1px}.discard .mahjong-art{width:98%;height:98%;flex-basis:98%}.hand{display:flex;gap:3px;justify-content:center;flex-wrap:wrap;padding:8px 0}.hand .tile{width:clamp(22px,6.2vw,42px);height:clamp(47px,12vw,63px);font-size:clamp(16px,4vw,23px);cursor:pointer;transition:transform .1s}.hand .mahjong-art{width:94%;height:94%;flex-basis:94%;}.hand .tile.selected{transform:translateY(-8px);outline:3px solid var(--gold)}.hand .tile:disabled{opacity:1}.actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}.actions button{flex:1;min-width:72px}.status{background:#fff5d9;color:#644b13;border-radius:10px;padding:10px;margin:8px 0;font-size:14px}.hidden{display:none!important}.scoregrid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.scorecell{background:#f4f7f4;border-radius:10px;text-align:center;padding:8px 3px;font-size:12px}.scorecell b{display:block;font-size:18px}.log{max-height:160px;overflow:auto;font-size:13px;line-height:1.7}.footer{text-align:center;color:#75857e;font-size:12px;padding:10px}.badge{background:#e8f2ed;color:#0d684e;border-radius:20px;padding:4px 9px;font-size:12px;font-weight:700}.sectiontitle{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}h2{font-size:16px;margin:0}
-#rotateNotice{display:none}
-.rotate-card{background:#fff;border-radius:18px;padding:28px 24px;max-width:320px;text-align:center;color:#18352d;box-shadow:0 8px 30px #0002}.rotate-card strong{font-size:22px}.rotate-card p{line-height:1.6;color:#687b73}
-@media(orientation:portrait){#rotateNotice{position:fixed;inset:0;z-index:9999;background:#f3f1e8;display:flex;align-items:center;justify-content:center;padding:24px}body>header,body>.wrap{visibility:hidden}}
-@media(orientation:landscape){header{padding:7px 14px}header h1{font-size:16px}header small{font-size:11px}.wrap{max-width:none;padding:6px 10px}.panel{padding:8px;margin-bottom:7px}.gamegrid{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(220px,1fr);gap:8px}.gamegrid>section.panel{margin-bottom:0}.table{min-height:calc(100vh - 185px);grid-template-columns:minmax(65px,1fr) minmax(220px,2.2fr) minmax(65px,1fr);grid-template-rows:auto minmax(0,1fr) auto auto;gap:2px;padding:7px}.seat{padding:3px;font-size:11px;min-height:35px}.table>.row>.seat:first-child,.table>.row>.seat:last-child{padding-top:14px}.opponentTiles{gap:2px;margin:3px 0 5px}.back{height:17px;width:11px}.middle{padding:5px;margin:2px 0}.status{padding:5px;margin:4px 0;font-size:11px}.hand{padding:4px 0;gap:2px}.hand .tile{width:clamp(24px,4.1vw,42px);height:clamp(42px,10vh,58px)}.actions{gap:4px}.actions button{padding:7px 8px;min-width:60px;font-size:12px}.scorecell{padding:5px 2px}.scorecell b{font-size:15px}.log{max-height:100px}.footer{padding:3px}}
+/* Portrait and landscape are both supported; adapt the table to the available width. */
+@media(orientation:portrait){
+ header{padding:12px 10px}
+ header h1{font-size:20px}
+ .wrap{padding:8px}
+ .gamegrid{display:flex;flex-direction:column;gap:8px}
+ .gamegrid>section.panel{margin-bottom:0}
+ .table{min-height:460px;grid-template-columns:minmax(42px,.7fr) minmax(0,2fr) minmax(42px,.7fr);grid-template-rows:auto minmax(150px,1fr) auto auto;gap:2px;padding:6px}
+ .seat{padding:3px;font-size:11px;min-height:36px}
+ .table>.row>.seat:first-child,.table>.row>.seat:last-child{padding-top:18px}
+ .opponentTiles{gap:2px;margin:3px 0 5px}
+ .back{height:18px;width:12px}
+ .middle{padding:5px;margin:2px 0;min-width:0}
+ .discards{gap:2px;min-height:24px}
+ .discard{width:18px;height:25px}
+ .status{padding:6px;margin:4px 0;font-size:12px}
+ .hand{gap:2px;padding:5px 0}
+ .hand .tile{width:clamp(19px,6.3vw,31px);height:clamp(39px,12vw,52px)}
+ .actions{gap:4px;flex-wrap:wrap}
+ .actions button{padding:8px 5px;min-width:0;font-size:12px}
+ .scoregrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .log{max-height:140px}
+}
+@media(orientation:landscape){
+ header{padding:7px 14px}header h1{font-size:16px}header small{font-size:11px}
+ .wrap{max-width:none;padding:6px 10px}
+ .panel{padding:8px;margin-bottom:7px}
+ .gamegrid{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(200px,1fr);gap:8px}
+ .gamegrid>section.panel{margin-bottom:0}
+ .table{min-height:calc(100vh - 185px);grid-template-columns:minmax(55px,1fr) minmax(0,2.2fr) minmax(55px,1fr);grid-template-rows:auto minmax(0,1fr) auto auto;gap:2px;padding:7px}
+ .seat{padding:3px;font-size:11px;min-height:35px}
+ .table>.row>.seat:first-child,.table>.row>.seat:last-child{padding-top:14px}
+ .opponentTiles{gap:2px;margin:3px 0 5px}.back{height:17px;width:11px}
+ .middle{padding:5px;margin:2px 0;min-width:0}
+ .status{padding:5px;margin:4px 0;font-size:11px}
+ .hand{padding:4px 0;gap:2px}
+ .hand .tile{width:clamp(24px,4.1vw,42px);height:clamp(42px,10vh,58px)}
+ .actions{gap:4px}.actions button{padding:7px 8px;min-width:60px;font-size:12px}
+ .scorecell{padding:5px 2px}.scorecell b{font-size:15px}
+ .log{max-height:100px}.footer{padding:3px}
+}
 @media(min-width:650px) and (orientation:landscape){.hand .tile{width:42px;height:56px}.discard{width:28px;height:35px}}
 </style></head>
 <body>
-<div id="rotateNotice"><div class="rotate-card"><div style="font-size:42px">↻</div><strong>請將手機轉為橫式</strong><p>本麻將遊戲需使用橫向螢幕，才能完整呈現四方牌桌。</p></div></div>
 <header><div><h1>🀄 台灣麻將</h1><small>16 張・四人牌桌</small></div><span class="badge">手機版 Beta</span></header>
 <div class="wrap">
 <section class="panel" id="lobby">
